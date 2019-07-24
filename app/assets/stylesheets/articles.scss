@@ -1,0 +1,196 @@
+body{
+  background: #F7F8FB;
+  margin: 0;
+  padding: 0;
+}
+
+.clearfix::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.container{
+  width: 1200px;
+  margin: 0 auto;
+}
+.center{
+  margin: 0 auto;
+}
+
+
+.header{
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  background: #3B4675;
+  z-index: 1;
+}
+
+.contents{
+  padding: 70px
+}
+.logo{
+  text-align: center;
+  text-decoration: none;
+  font-size: 40px;
+  color: white;
+  float: left;
+  padding: 5px 10px;
+}
+
+header ul{
+  float: right;
+}
+
+header li{
+  list-style-type: none;
+  display: inline-block;
+  text-align: center;
+  padding: 5px 10px;
+  color: white;
+}
+.header_link_text{
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+}
+
+.left_content{
+  float: left;
+  width: 300px;
+  border: solid #E6ECF0 1px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 65px;
+}
+
+.user_background{
+  width: 100%;
+  height: 100px;
+  background: url("https://rr.img.naver.jp/mig?src=http%3A%2F%2Flivedoor.blogimg.jp%2Fhikoken_tokyo%2Fimgs%2F7%2F5%2F75b28e82.jpg&twidth=1200&theight=1200&qlt=80&res_format=jpg&op=r");
+  background-size: cover;
+}
+
+.user_info{
+  position: relative;
+}
+.profile_edit{
+  text-decoration: none;
+  /* color: #3AA1F2;
+  border: solid #3AA1F2 1px; */
+  background: #C9AF3C;
+  color: white;
+  border-radius: 30px;
+  padding: 10px;
+  margin: 8px 5px;
+  float: right;
+}
+
+.user_avatar{
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: solid white 2px;
+  top: -50px;
+}
+.user_profile{
+  padding: 5px 10px;
+}
+
+.user_profile a{
+  text-decoration: none;
+  color: inherit;
+  font-size: 20px;
+}
+
+.right_content{
+  float: left;
+  width: 780px;
+  margin: 0 20px;
+}
+article{
+  border-radius: 3px;
+  border: solid #E6ECF0 1px;
+  /* box-shadow: 0 0 5px gray; */
+  margin: 0 auto;
+  padding: 10px 0 30px;
+}
+
+.post_text{
+  float: left;
+  width: 90%;
+  padding: 5px;
+}
+
+.post_user_img{
+  width: 50px;
+  height: 50px;
+  float: left;
+  border-radius: 50%;
+  margin: 5px;
+}
+.post_user{
+  font-size: 16px;
+}
+.post_text img{
+  width: 100%;
+}
+
+footer{
+  text-align: center;
+  color:#929FA9;
+}
+
+// Articleの投稿画面のCSS
+.new_header{
+  width: 100%;
+  height: 60px;
+  background: #3B4675;
+}
+.post_area{
+  width: 1000px;
+  margin: 0 auto;
+  padding-top: 20px; 
+}
+.new_header h2{
+  line-height: 60px;
+  text-align: center;
+  color: #fff;
+  padding: 0;
+  margin: 0;
+}
+
+.post_text_field{
+  width: 1000px;
+  min-height: 300px;
+}
+.btn{
+  background: #677988;
+  color: #fff;
+  text-decoration: none;
+  font-size: 12px;
+  width: 100px;
+  height:30px;
+  border-radius: 30px;
+  padding: 8px 20px;
+  margin: 10px auto;
+  cursor: pointer;
+}
+
+.tweet_btn{
+  // float: left;
+  background: #3AA1F2;
+  color: #fff;
+  width: 100px;
+  height:30px;
+  font-size: 12px;
+  border-radius: 30px;
+  padding: 5px 20px;
+  margin: 10px auto;
+  cursor: pointer;
+}
+.tweet_btn:hover{
+  opacity: 0.9;
+}

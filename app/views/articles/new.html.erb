@@ -1,0 +1,17 @@
+<div class="new_header">
+  <h2>新規投稿を追加</h2>
+</div>
+<div class="container">
+  <div class="post_area">
+    <%= form_for @article do |f| %>
+    <div class="center">
+      <p>投稿内容</p>
+      <%= f.text_area :text,placeholder: "こちらに記事をお書きください", class: "post_text_field" %>
+    </div>
+    <div class="center">
+      <%= f.submit "ツイート", class: "tweet_btn" %>
+      <%= link_to "キャンセル", root_path, class: "btn" %>
+    </div>
+    <% end %>
+  </div>
+</div>
