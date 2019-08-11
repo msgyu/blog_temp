@@ -11,7 +11,7 @@
         <%= link_to 'プロフィールの編集', edit_user_registration_path, class:"profile_edit" %>
       </div>
       <div class="user_profile">
-          <h2><%= link_to "#{current_user.nickname}","/users/#{current_user.id}" %></h2>
+          <h2><a href=""><%= current_user.nickname %></a></h2>
           <div class="user_profile_text">
             <%= current_user.profile_text %>
           </div>
@@ -20,14 +20,7 @@
   </div>
 
   <div class="right_content">
-    <% @articles.each do |article| %>
-      <div class="post_shown_link_area">
-      <%= link_to "","/articles/#{article.id}",method: :get, class:"post_shown_link" %>
-      <%= render partial: "shared/article" , locals: { article: article }%>
-      </div>
-    <% end %>
-    
-    <%= paginate(@articles) %>
+    <%= render partial: "shared/article" , locals: { article: @article }%>
     
 
   </div>

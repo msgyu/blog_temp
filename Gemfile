@@ -64,3 +64,7 @@ gem 'pry-rails'
 gem 'kaminari'
 gem 'devise'
 gem 'mini_magick'
+gem 'carrierwave'
+gem "jquery-rails"
+gem 'jquery-ui-rails'
+gem 'mechanize'

@@ -20,10 +20,23 @@
   </div>
 
   <div class="right_content">
+    <div class="user_background">
+      <%= image_tag current_user.background_image,class:"user_background" %>
+    </div>
+    <div class="user_info clearfix">
+        
+      <%= image_tag current_user.avatar, class:"user_avatar" %>
+    </div>
+    <div class="user_profile">
+        <h2><%= link_to "#{@user.nickname}","/users/#{@user.id}" %></h2>
+        <div class="user_profile_text">
+          <%= @user.profile_text %>
+        </div>
+    </div>
     <% @articles.each do |article| %>
       <div class="post_shown_link_area">
-      <%= link_to "","/articles/#{article.id}",method: :get, class:"post_shown_link" %>
-      <%= render partial: "shared/article" , locals: { article: article }%>
+        <%= render partial: "shared/article" , locals: { article: article }%>
+        <%= link_to "","/articles/#{article.id}",method: :get, class:"post_shown_link" %>
       </div>
     <% end %>
     

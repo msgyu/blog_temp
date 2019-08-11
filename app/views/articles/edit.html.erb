@@ -3,7 +3,7 @@
 </div>
 <div class="container">
   <div class="post_area">
-    <%= form_for [@article] do |f| %>
+    <%= form_for @article, :url => {:action => 'update'} do |f| %>
     <div class="center">
       <p>投稿内容</p>
       <%= f.text_area :text, placeholder: "こちらに記事をお書きください", class: "post_text_field" %>

@@ -1,2 +1,12 @@
 class ApplicationController < ActionController::Base
+  protect_from_forgery with: :exception
+  before_action :configure_permitted_parameters, if: :devise_controller?
+
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:nickname,:avatar,:profile_text,:background_image])
+    devise_parameter_sanitizer.permit(:account_update, keys: [:nickname,:avatar,:profile_text,:background_image])
+    # devise_parameter_sanitizer.permit(:sign_up, keys: [:avatar])
+    # devise_parameter_sanitizer.permit(:sign_up, keys: [:profile_text])
+
+  end
 end

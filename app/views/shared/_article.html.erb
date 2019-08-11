@@ -1,0 +1,28 @@
+<article class="clearfix post_article">
+  <%= image_tag article.user.avatar, class:"post_user_img" %>
+    <nav id="menu" role="navigation">
+        <ul>
+          <li class="child-list"><i class="fas fa-caret-down"></i>
+            <ul class="sub-menu">
+              <li><%= link_to '編集',"/articles/#{article.id}/edit",method: :get,class:"sub_menu_list" %></li>
+              <li><%= link_to '削除',"/articles/#{article.id}",method: :delete,class:"sub_menu_list" %></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+  <div class="post_text">
+    <%= link_to "#{article.user.nickname}","/users/#{article.user.id}",class:"post_user" %>
+    <% if article.text.include?("http") %>
+      <div class="posted_text_area">
+        <%= text_url_to_link(h(simple_format(article.text))).html_safe %>
+      </div>
+      <div>
+        これが出てくればOK
+        <%= @image %>
+        <%= @url_text_h1 %>
+      </div>
+    <% else %>
+      <%= text_url_to_link(h(simple_format(article.text))).html_safe %>
+    <% end %>
+  </div>
+</article>

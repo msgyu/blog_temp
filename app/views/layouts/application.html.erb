@@ -16,6 +16,26 @@
   </head>
 
   <body>
+    <header class="header clearfix">
+      <div class="container" class="clearfix">
+        <%= link_to 'Logo', root_path, method: :get, class: "logo"%>
+        <ul class="clearfix">
+        <% if user_signed_in? %>
+          <li><%= link_to "#{current_user.nickname}","/users/#{current_user.id}",class:"header_link_text" %></li>
+          <li><i class="fas fa-pen"></i><%= link_to ' 投稿', new_article_path, method: :get, class: "header_link_text" %></li>
+          <li><%= link_to 'ログアウト', "/users/sign_out", method: :delete, class: "header_link_text" %></li>
+        <% else%>
+          <li><i class="fas fa-pen"></i><%= link_to ' 投稿', new_article_path, method: :get, class: "header_link_text" %></li>
+          <li><%= link_to 'ログイン', "/users/sign_in", method: :get, class: "header_link_text" %></li>
+        <% end %>
+        </ul>
+      </div>
+    </header>
     <%= yield %>
+    <footer>
+      <div class="container">
+        <p>&copy:mylevel</p>
+      </div>
+    </footer>
   </body>
 </html>
